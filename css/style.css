@@ -1,0 +1,82 @@
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin:0px; padding:0px; }
+body { background:#f2f2f2; color:#333; font-family:Arial, helvetica, sans-serif; }
+
+/* INPUT FIELDS */
+input { width: 80%; padding: 12px 20px; margin: 8px; border: none; border-radius: 5px; }
+input[type=button], input[type=submit], input[type=reset] { min-width: 120px; width: 25%; background-color: #F24C27; border: none;
+                                                            color: white; padding: 16px 32px; margin: 20px 2px 0px 0px;
+                                                            cursor: pointer; }
+
+.checkboxes input[type="text"] { width: 40%; }
+.checkboxes input[type="tel"] {width: 40%;}
+.checkboxes input[type="checkbox"] { height: 18px; width: 18px; }
+
+/* TABLES */
+table tr:nth-child(even) { background-color: #607f60; }
+table tr:nth-child(odd) { background-color: #607f99; }
+table td{ padding: 5px; }
+table th { color: white; background-color: black; padding: 5px; cursor: pointer; }
+
+/* LINKS */
+a { text-decoration: none; color:#F24C27; }
+
+/* WRAPPER DIV */
+.wrapper { max-width: 1000px; width:80%; margin:auto; overflow: hidden; }
+
+/* HEADER AND MENU ATRIBUTES */
+header { width: 100%; height: 83px; padding: 0px 0; background: #fff; overflow: hidden; }
+header nav { float: right; }
+header nav ul li { display: inline-block; margin:20px 5px; }
+header nav ul li a { display: block; background: #f2f2f2; color: #037E8C; padding:10px 20px; text-decoration: none;
+                     border-radius:3px; transition:all 300ms ease; }
+header nav ul li a:hover { color: #fff; background: #F24C27; }
+
+.menu_bar { display: none; }
+
+/* LOGO DATA */
+.logo { padding:5px 0px; width: 62px; float: left; }
+.logo img { width: 100%; vertical-align: top; }
+
+/* FRONT TITLE */
+.mensaje { background:#F24C27; padding:20px; color:#fff; margin:20px 0; border-radius:5px; }
+
+/* BODY STRUCT */
+.articulo { float: left; width: 69%; padding: 20px; background:#024959; color: #fff; border-radius: 5px; margin-right: 1%;
+            margin-bottom: 20px; text-align: center; }
+
+/* RIGHT MENU */
+aside { float: left; width: 29%; background:#024959; color:#fff; padding:20px; border-radius:5px; margin-left: 1%;
+        margin-bottom: 20px; }
+.widget ul { margin-left:20px; }
+.widget ul li { margin:10px 0; width: 100%; }
+.widget ul li a { color:#fff; }
+.widget ul li a:hover { text-decoration: underline; }
+
+/* FOOTER */
+footer { width: 100%; background:#333; color:#fff; padding: 50px 0; }
+footer p { text-align:center; }
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 1000px) {
+    header { padding: 0px; margin-left: 0px; height: 83px; }
+    header nav { width: 100%; height: auto; left: 0; top: -100%; margin-top: 83px; position: fixed; box-shadow: 10px 10px black; } /* Container de todos los botones */
+    header nav ul { text-align: left; background: #024959; border-top: 4px solid black;}
+    header nav ul li { margin: 0px; display: block; float: none; border-left: 0px solid black; border-right: 0px solid black; border-top: 1px solid black; } /* Cada uno de los botones de la lista */
+    header nav ul li a { padding: 15px; background: #024959; color: white; border-radius: 0px; }
+    header nav ul li a:hover { border-radius: 0px; }
+
+    aside { display: none; }
+    .logo { display: none; }
+
+    .articulo { float: none; width: 100%; margin: auto; margin-bottom: 10px; }
+
+    .menu_bar { display: block; width: 100%; height: 80px; background: #ccc; position: fixed; text-align: center; z-index: 5; border-bottom: 1px black; } /* Container title button toggle */
+    .menu_bar .bt-menu { display: block; padding:20px; background:#024959; color:#fff; text-decoration:none; font-weight: bold; font-size:25px; /* Button front toggle text */
+                         -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+    .menu_bar span { float: center; font-size: 40px; } /* Button front toggle icon */
+
+    .wrapper { width: 90%; overflow: hidden; }
+
+    footer { width: 100%; background:#333; padding:50px 0; color:#fff; }
+    footer p { text-align:center; }
+}
